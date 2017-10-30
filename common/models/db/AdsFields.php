@@ -47,11 +47,11 @@ class AdsFields extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'type_id' => 'Type ID',
+            'type_id' => 'Тип',
             'label' => 'Label',
-            'template' => 'Template',
+            'template' => 'Шаблон',
             'name' => 'Name',
-            'interval' => 'Interval',
+            'interval' => 'Включить интервал',
         ];
     }
 

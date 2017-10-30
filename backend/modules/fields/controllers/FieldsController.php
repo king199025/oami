@@ -2,7 +2,10 @@
 
 namespace backend\modules\fields\controllers;
 
+use backend\modules\category\models\Category;
+use common\classes\Debug;
 use common\models\db\AdsFieldsType;
+use common\models\db\CategoryFields;
 use Yii;
 use backend\modules\fields\models\Fields;
 use backend\modules\fields\models\FieldsSearch;
@@ -67,12 +70,19 @@ class FieldsController extends Controller
         $model = new Fields();
         $fieldType = AdsFieldsType::find()->all();
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            foreach (Yii::$app->request->post('category') as $item) {
+                $fieldCategory = new CategoryFields();
+                $fieldCategory->category_id = $item;
+                $fieldCategory->fields_id = $model->id;
+                $fieldCategory->save();
+            }
+            return $this->redirect(['index']);
         } else {
-
+            $category = Category::find()->all();
             return $this->render('create', [
                 'model' => $model,
                 'fieldType' => $fieldType,
+                'category' => $category,
             ]);
         }
     }

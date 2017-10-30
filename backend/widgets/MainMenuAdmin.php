@@ -24,13 +24,13 @@ class MainMenuAdmin extends Widget
                         'active' => Yii::$app->controller->module->id == 'category',
                     ],
                     [
-                        'label' => 'Новости',
+                        'label' => 'Управление полями',
                         /*'active' => Yii::$app->controller->id == 'site',*/
                         'items' => [
                             [
-                                'label' => '123',
-                                'url' => Url::to(['/site/index']),
-                                'active' => Yii::$app->requestedRoute == 'site/index',
+                                'label' => 'Поля',
+                                'url' => Url::to(['/fields/fields']),
+                                'active' => Yii::$app->controller->module->id == 'fields',
                             ],
                             [
                                 'label' => '345',
@@ -40,7 +40,7 @@ class MainMenuAdmin extends Widget
                         'options' => [
                             'class' => 'treeview',
                         ],
-                        'template' => '<a href="#"><i class="fa fa-newspaper-o"></i> <span>{label}</span> <i class="fa fa-angle-left pull-right"></i></a>',
+                        'template' => '<a href="#"><i class="fa fa-leanpub"></i> <span>{label}</span> <i class="fa fa-angle-left pull-right"></i></a>',
                     ],
                     [
                         'label' => 'Доска',

@@ -7,6 +7,7 @@ use yii\widgets\ActiveForm;
 /* @var $model backend\modules\fields\models\Fields */
 /* @var $form yii\widgets\ActiveForm */
 /* @var $fieldType \common\models\db\AdsFieldsType*/
+/* @var $category \backend\modules\category\models\Category */
 ?>
 
 <div class="fields-form">
@@ -23,8 +24,21 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'interval')->checkbox(); ?>
 
+    <label for="">Выберите для каких категорий использовать это поле</label>
+
+    <?= \kartik\select2\Select2::widget(
+        [
+            'name' => 'category[]',
+            'data' => \yii\helpers\ArrayHelper::map($category, 'id', 'name'),
+            'options' => ['placeholder' => 'Начните вводить ...', 'multiple' => true],
+            'pluginOptions' => [
+                'allowClear' => true
+            ],
+        ])
+    ?>
+
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Сохрпнить' : 'Сохранить', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

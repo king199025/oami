@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\modules\fields\models\Fields */
 
-$this->title = 'Update Fields: ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Fields', 'url' => ['index']];
+$this->title = 'Редактирование поля: ' . $model->name;
+$this->params['breadcrumbs'][] = ['label' => 'Поля', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'Редактировать';
 ?>
 <div class="fields-update">
 

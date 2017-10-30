@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\modules\fields\models\FieldsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Fields';
+$this->title = 'Поля';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="fields-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Fields', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавить', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

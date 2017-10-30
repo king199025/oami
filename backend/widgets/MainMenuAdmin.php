@@ -33,8 +33,9 @@ class MainMenuAdmin extends Widget
                                 'active' => Yii::$app->controller->module->id == 'fields',
                             ],
                             [
-                                'label' => '345',
-                                'url' => '#',
+                                'label' => 'Значения по умолчанию',
+                                'url' => Url::to(['/field_default/field_default']),
+                                'active' => Yii::$app->controller->module->id == 'field_default',
                             ],
                         ],
                         'options' => [

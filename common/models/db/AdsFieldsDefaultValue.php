@@ -43,8 +43,8 @@ class AdsFieldsDefaultValue extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'value' => 'Value',
-            'ads_field_id' => 'Ads Field ID',
+            'value' => 'Значение',
+            'ads_field_id' => 'Поле',
         ];
     }
 

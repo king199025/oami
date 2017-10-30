@@ -19,6 +19,9 @@ return [
         'fields' => [
             'class' => 'backend\modules\fields\Fields',
         ],
+        'field_default' => [
+            'class' => 'backend\modules\field_default\FieldDefault',
+        ],
     ],
     'components' => [
         /*'user' => [

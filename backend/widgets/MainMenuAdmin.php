@@ -18,8 +18,10 @@ class MainMenuAdmin extends Widget
 
                     ],
                     [
-                        'label' => 'Ссылка 2',
-                        'url' => '#'
+                        'label' => 'Категории',
+                        'url' => Url::to(['/category/category']),
+                        'template' => '<a href="{url}"><i class="fa fa-dashboard"></i> <span>{label}</span></a>',
+                        'active' => Yii::$app->controller->module->id == 'category',
                     ],
                     [
                         'label' => 'Новости',

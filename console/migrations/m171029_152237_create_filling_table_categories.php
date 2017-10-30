@@ -47,35 +47,119 @@ class m171029_152237_create_filling_table_categories extends Migration
                     'parent_id' => 2,
                     'description' => '<p>Описание</p>',
                 ]);
-					$this->insert('category', [
-						'id' => 12,
-						'name' => 'Аксессуары для телефонов',
-						'icon' => '',
-						'slug' => 'aksessuaryi-dlya-telefonov',
-						'parent_id' => 2,
-						'description' => '<p>Описание</p>',
-					]);
-					
-					
-					Карты памяти
-					Моноподы и пульты для селфи
-					Аккумуляторы
-					Держатели для мобильных устройств
-					Док-станции
-					Чехлы
-					Кабели для зарядки
-					Антенны и усилители сигнала
-					Громкая связь для авто
-					Объективы
-					Подвески
-					Стилусы
-					
-					Универсальные внешние аккумуляторы
-					Чехлы-аккумуляторы
-					Гарнитуры для проводных телефонов
-					
-					
-					
+
+                        $this->insert('category', [
+                            'id' => 103,
+                            'name' => 'Карты памяти',
+                            'icon' => '',
+                            'slug' => 'kartyi-pamyati',
+                            'parent_id' => 12,
+                            'description' => '<p>Описание</p>',
+                        ]);
+                        $this->insert('category', [
+                            'id' => 104,
+                            'name' => 'Моноподы и пульты для селфи',
+                            'icon' => '',
+                            'slug' => 'monopodyi-i-pultyi-dlya-selfi',
+                            'parent_id' => 12,
+                            'description' => '<p>Описание</p>',
+                        ]);
+                        $this->insert('category', [
+                            'id' => 105,
+                            'name' => 'Аккумуляторы',
+                            'icon' => '',
+                            'slug' => 'akkumulyatoryi',
+                            'parent_id' => 12,
+                            'description' => '<p>Описание</p>',
+                        ]);
+                        $this->insert('category', [
+                            'id' => 106,
+                            'name' => 'Держатели для мобильных устройств',
+                            'icon' => '',
+                            'slug' => 'derzhateli-dlya-mobilnyih-ustroystv',
+                            'parent_id' => 12,
+                            'description' => '<p>Описание</p>',
+                        ]);
+                        $this->insert('category', [
+                            'id' => 107,
+                            'name' => 'Док-станции',
+                            'icon' => '',
+                            'slug' => 'dok-stantsii',
+                            'parent_id' => 12,
+                            'description' => '<p>Описание</p>',
+                        ]);
+                        $this->insert('category', [
+                            'id' => 108,
+                            'name' => 'Чехлы',
+                            'icon' => '',
+                            'slug' => 'chehlyi',
+                            'parent_id' => 12,
+                            'description' => '<p>Описание</p>',
+                        ]);
+                        $this->insert('category', [
+                            'id' => 109,
+                            'name' => 'Кабели для зарядки',
+                            'icon' => '',
+                            'slug' => 'kabeli-dlya-zaryadki',
+                            'parent_id' => 12,
+                            'description' => '<p>Описание</p>',
+                        ]);
+                        $this->insert('category', [
+                            'id' => 110,
+                            'name' => 'Антенны и усилители сигнала',
+                            'icon' => '',
+                            'slug' => 'antennyi-i-usiliteli-signala',
+                            'parent_id' => 12,
+                            'description' => '<p>Описание</p>',
+                        ]);
+                        $this->insert('category', [
+                            'id' => 111,
+                            'name' => 'Громкая связь для авто',
+                            'icon' => '',
+                            'slug' => 'gromkaya-svyaz-dlya-avto',
+                            'parent_id' => 12,
+                            'description' => '<p>Описание</p>',
+                        ]);
+                        $this->insert('category', [
+                            'id' => 112,
+                            'name' => 'Подвески',
+                            'icon' => '',
+                            'slug' => 'podveski',
+                            'parent_id' => 12,
+                            'description' => '<p>Описание</p>',
+                        ]);
+                        $this->insert('category', [
+                            'id' => 113,
+                            'name' => 'Стилусы',
+                            'icon' => '',
+                            'slug' => 'stilusyi',
+                            'parent_id' => 12,
+                            'description' => '<p>Описание</p>',
+                        ]);
+                        $this->insert('category', [
+                            'id' => 114,
+                            'name' => 'Универсальные внешние аккумуляторы',
+                            'icon' => '',
+                            'slug' => 'universalnyie-vneshnie-akkumulyatoryi',
+                            'parent_id' => 12,
+                            'description' => '<p>Описание</p>',
+                        ]);
+                        $this->insert('category', [
+                            'id' => 115,
+                            'name' => 'Чехлы-аккумуляторы',
+                            'icon' => '',
+                            'slug' => 'chehlyi-akkumulyatoryi',
+                            'parent_id' => 12,
+                            'description' => '<p>Описание</p>',
+                        ]);
+                        $this->insert('category', [
+                            'id' => 116,
+                            'name' => 'Гарнитуры для проводных телефонов',
+                            'icon' => '',
+                            'slug' => 'garnituryi-dlya-provodnyih-telefonov',
+                            'parent_id' => 12,
+                            'description' => '<p>Описание</p>',
+                        ]);
                 $this->insert('category', [
                     'id' => 13,
                     'name' => 'Чехлы',

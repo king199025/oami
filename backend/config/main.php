@@ -16,6 +16,9 @@ return [
         'category' => [
             'class' => 'backend\modules\category\Category',
         ],
+        'fields' => [
+            'class' => 'backend\modules\fields\Fields',
+        ],
     ],
     'components' => [
         /*'user' => [

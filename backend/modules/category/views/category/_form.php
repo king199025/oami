@@ -6,6 +6,7 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model backend\modules\category\models\Category */
 /* @var $form yii\widgets\ActiveForm */
+/* @var $category backend\modules\category\Category */
 ?>
 
 <div class="category-form">
@@ -16,9 +17,16 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'icon')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'slug')->textInput(['maxlength' => true]) ?>
+    <?/*= $form->field($model, 'slug')->textInput(['maxlength' => true]) */?>
 
-    <?= $form->field($model, 'parent_id')->textInput() ?>
+    <?= $form->field($model, 'parent_id')->widget(\kartik\select2\Select2::className(),
+        [
+            'data' => \yii\helpers\ArrayHelper::map($category, 'id', 'name'),
+            'options' => ['placeholder' => 'Начните вводить ...'],
+            'pluginOptions' => [
+                'allowClear' => true
+            ],
+        ]) ?>
 
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 
